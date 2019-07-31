@@ -25,12 +25,12 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 };
 
 
-
-
-
-Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-
+Traveller.prototype.getJourneysByMinDistance = function (distance) {
+    return this.journeys.filter((journey) => {
+    return journey.distance >= distance;
+  })
 };
+
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
 
