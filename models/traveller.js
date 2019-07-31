@@ -33,8 +33,19 @@ Traveller.prototype.getJourneysByMinDistance = function (distance) {
 
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
-
+  return this.journeys.reduce((total, journey) => {
+    return total += journey.distance;
+  }, 0);
 };
+
+//
+// Cinema.prototype.totalRunningTime = function () {
+//   return this.films.reduce((total, film) => {
+//     return total += film.length;
+//   }, 0);
+// };
+
+
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
 
