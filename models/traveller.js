@@ -38,18 +38,19 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
   }, 0);
 };
 
-//
-// Cinema.prototype.totalRunningTime = function () {
-//   return this.films.reduce((total, film) => {
-//     return total += film.length;
-//   }, 0);
-// };
-
 
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
 
 };
+
+Traveller.prototype.getUniqueModesOfTransport = function (transport) {
+  return this.journeys.filter((journey) => {
+    return journey[transport] === transport;
+  });
+};
+
+
 
 
 module.exports = Traveller;
